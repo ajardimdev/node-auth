@@ -1,0 +1,6 @@
+node_modules
+pgdata
+.env*
+*.log
+*.sqlite
+__tests__/coverage
