@@ -4,6 +4,7 @@ module.exports = async (email, password) => {
   const user = await User.findOne({
     where: { email },
   }).catch((err) => {
+    console.debug("err", err);
     throw new Error("error trying find user by e-mail");
   });
 

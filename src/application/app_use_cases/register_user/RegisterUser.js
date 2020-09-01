@@ -8,6 +8,7 @@ module.exports = async (name, email, password) => {
   }
 
   const user = await User.create({ name, email, password }).catch((err) => {
+    console.debug("err", err);
     throw new Error("error trying register a new user.");
   });
 
